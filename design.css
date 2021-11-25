@@ -1,0 +1,428 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Shippori+Antique&display=swap');</style>
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box; text-decoration: none;
+    outline: none;
+    border: none; 
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+
+
+*::selection{
+    background: var(--yellow);
+    color: #333;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: #222;
+}
+
+html::-webkit-slider-thumb{
+    background: var(--yellow);
+}
+
+body{
+    background: #111;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.btn{
+    padding: .7rem 3rem;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+.btn i{
+    padding: 0 .5rem;
+    font-size: 1.8rem;
+}
+.btn:hover{
+    background: rgb(36, 207, 36);
+}
+
+header{
+    position: fixed;
+    top: 0;left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #1a1a1a;
+    display: flex;align-items: center;flex-flow: column;
+    text-align: center;
+}
+
+header .user img{
+   height: 17rem;
+   width: 17rem;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-bottom: 1rem;
+   border: 7rem solid var(--yellow);
+}
+
+header .user .name{
+    font-size: 3.5rem;
+    color: #fff;
+    color: orangered;
+}
+
+header .user .education{
+    font-size: 2rem;
+    color: #fff;
+}
+
+header .navbar{
+    width: 100%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem;
+    background: #333;
+    color: white;
+    font-size: 2rem;
+    border-radius: 5rem;
+    text-decoration: none;
+}
+
+header .navbar ul li a:hover{
+    background:rgb(53, 194, 53);
+}
+
+#menu{
+    position:fixed;
+    top: 2rem; right: 2rem;
+    background:white;
+    color:#333 ;
+    cursor:pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display:-moz-grid;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+
+.home h3{
+    font-size: 2.5rem;
+    color: white;
+}
+
+.home h1{
+    font-size: 5rem;
+    color: white;
+}
+
+.home h1 span{
+    color:orangered;
+}
+
+.home p{
+    font-size: 2rem;
+    color: white;
+    padding: 1rem 0;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+.about .info{
+    /* display: flex; */
+    justify-content: space-around;
+    flex-flow: column;
+    margin-left: 5rem;
+}
+.about h1{
+    font-size: 4rem;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: -1rem;
+}
+.about span{
+    font-size: 3.5rem;
+    color: rgb(212, 82, 42);
+    padding-top: 1rem;
+    padding: .5rem 1.5rem;
+}
+.about h3{
+    font-size: 2.7rem;
+    color: white;
+}
+.about h5{
+    font-size: 2rem;
+    color: white;
+}
+
+.education .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.education .box-container .box{
+    width: 30rem;
+    margin: 1rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid white;
+    position: relative;
+}
+.education .box-container .box span{
+    font-size: 1.3rem;
+    background: rgb(45, 180, 97);
+    color: #fff;
+    border-radius: 3rem;
+    padding: .5rem 1.5rem;
+}
+.education h1{
+    font-size: 4rem;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: -1rem;
+}
+.education span{
+    font-size: 4rem;
+    color: rgb(212, 82, 42);
+    padding-top: 1rem;
+    padding-bottom: -1rem;
+}
+.education .box-container .box h5{
+    font-size: 1.8rem;
+    color: rgb(212, 82, 42);
+    padding-top: 1rem;
+}
+.education .box-container .box h2{
+    font-size: 2.5rem;
+    color: rgb(150, 151, 69);
+    padding-top: 1rem;
+}
+.education .box-container .box h4{
+    font-size: 1.8rem;
+    color:wheat;
+    padding-top: 1rem;
+}
+.education .box-container .box h3{
+    font-size: 1.8rem;
+    color: #fff;
+    padding-top: 1rem;
+}
+.education .box-container .box i{
+    position: absolute;
+    top: -1rem; left: -2;
+    height: 4rem; width: 4rem;
+    border-radius: 50%;
+    line-height: 4rem;
+    text-align: center;
+    color: white;
+    background-color: tomato;
+}
+
+.projects .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.projects .box-container .box{
+    width: 30rem;
+    margin: 1rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid white;
+    position: relative;
+}
+.projects .box-container .box span{
+    font-size: 1.3rem;
+    background: rgb(45, 180, 97);
+    color: #fff;
+    border-radius: 3rem;
+    padding: .5rem 1.5rem;
+}
+.projects h1{
+    font-size: 4rem;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: -1rem;
+}
+.projects span{
+    font-size: 4rem;
+    color: rgb(212, 82, 42);
+    padding-top: 1rem;
+    padding-bottom: -1rem;
+}
+.projects .box-container .box p{
+    font-size: 1.8rem;
+    color: rgb(212, 82, 42);
+    padding-top: 1rem;
+}
+.projects    .box-container .box h4{
+    font-size: 1.8rem;
+    color:wheat;
+    padding-top: 1rem;
+}
+.projects .box-container .box h5{
+    font-size: 1.8rem;
+    color: rgb(212, 82, 42);
+    padding-top: 1rem;
+}
+.projects .box-container .box h3{
+    font-size: 1.8rem;
+    color: #fff;
+    padding-top: 1rem;
+}
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact .row .content{
+    flex: 1 1 25rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+.contact h1{
+    font-size: 4rem;
+    color: white;
+    padding-top: 1rem;
+    /* padding-bottom: -1rem; */
+}
+.contact h1 span{
+    font-size: 4rem;
+    color: rgb(212, 80, 40);
+    padding-top: 1rem;
+    /* padding-bottom: -1rem; */
+}
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    margin: 2rem;
+}
+
+.contact .row form .box{
+   padding: .5rem;
+   font-size: 1.7rem;
+   margin: 1rem;
+   background: #333;
+   color: white;
+   text-transform: none;
+   width: 100%;
+}
+
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+}
+.contact .row form .message{
+    height: 15rem;
+    resize: none;
+}
+.contact .row .content .tittle{
+    text-transform: uppercase;
+    color: white;
+    font-size: 3rem;
+    /* padding-bottom: 2rem; */
+}
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    padding: 1rem 0;
+    font-weight: normal;
+}
+.contact .row .content .info i{
+    padding-right: 1rem;
+    color: rgb(44, 199, 44);
+}
+.contact .row form{
+    margin: 0 0;
+}
+
+.top{
+    position: fixed;
+    bottom: 7.5rem; right: 2rem;
+    z-index: 100;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+    .home{
+        padding: 1rem 4rem;
+    }
+}
+@media (max-width:900px){
+    header{
+        left:-120%;
+          }
+    }
+    
+    #menu{
+        display: inline-block;
+    }
+    header.toggle{
+        left: 0%;
+    }
+}
+
+@media (max-width:768px){
+   html{
+       font-size: 50%;
+          }
+    }
+
+
+@media (max-width:400px){
+    header{
+        width: 100vw;
+          }
+    }
+
